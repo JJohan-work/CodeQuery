@@ -25,7 +25,6 @@ function nextQuestion(x,y) {
   }
   displayQuestion(y);
   expandQuestion("#Q"+x.toString());
-  console.log(x);
   if (x <= 8){
     x += 1;
   } else {
@@ -33,13 +32,15 @@ function nextQuestion(x,y) {
     $("#answer").show();
     x = 1
   }
-  console.log(x);
   return x
 }
+function displayAnswer() {}
 
 
+//answer array:
+answers = [0,0,0,0];
 
-
+//main function:
 $(document).ready(function() {
   $(".qcont").hide();
   $("#answer").hide();
@@ -50,14 +51,26 @@ $(document).ready(function() {
   $(".answer").click([curQ],function() {
     let curCont = "#Q"+curQ.toString()+">.qcont";
     curQ = nextQuestion(curQ,curCont)
-
-
-
+    answer = $(this).attr("class").split(' ')[0];
+    if (answer == "A1") {
+      let a = answers[0];
+      a += 1;
+      answers[0] = a;
+    }
+    else if (answer == "A2") {
+      let a = answers[1];
+      a += 1;
+      answers[1] = a;
+    }
+    else if (answer == "A3") {
+      let a = answers[2];
+      a += 1;
+      answers[2] = a;
+    }
+    else if (answer == "A4") {
+      let a = answers[3];
+      a += 1;
+      answers[3] = a;
+    }
   });
 });
-
-
-// python
-// R
-// Javascript
-// 
