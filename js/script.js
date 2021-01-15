@@ -1,24 +1,44 @@
+function expandQuestion(x) {
+  $(x).animate({
+    height: '800px',
+});
+}
+
+function shrinkQuestion(x) {
+  $(x).animate({
+    height: '50px',
+});
+}
+
 function displayQuestion(curCont) {
   $(".qcont").hide();
   $(".qcont").removeClass("elemDisplay");
-  $(".qcont").removeClass("questionExpand");
   $(curCont).show();
   $(curCont).addClass("elemDisplay");
-  $(curCont).addClass("questionExpand");
 }
 
 function nextQuestion(x,y) {
-  console.log(y);
-  x += 1;
-  console.log(x);
+  if (!(x === 1)) {
+    shrinkQuestion("#Q"+(x-1).toString())
+    window.scrollBy(0, 100);
+  }
   displayQuestion(y);
+  expandQuestion("#Q"+x.toString());
+  console.log(x);
+  if (x <= 8){
+    x += 1;
+  } else {
+    shrinkQuestion("#Q"+(x).toString())
+    x = 1
+  }
+  console.log(x);
   return x
 }
 
 $(document).ready(function() {
   $(".qcont").hide();
   curQ = 1;
-  $("#next").click([curQ],function() {
+  $("body").click([curQ],function() {
     let curCont = "#Q"+curQ.toString()+">.qcont";
     curQ = nextQuestion(curQ,curCont)
   });
