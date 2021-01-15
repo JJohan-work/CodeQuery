@@ -26,13 +26,12 @@ The quiz decides one of four languages to suggest based on how the user responde
 * * *
 
 ## Setup instructions:  
-* Go to [Github Pages](https://jjohan-work.github.io/#) to see webpage
+* Go to [Github Pages](https://jjohan-work.github.io/CodeQuery/) to see webpage
 * Answer Questions to find out which coding language is for you
 * Refresh page to restart Quiz at anytime
 #### Alt
 * Clone Repo
 * Open index.html in browser
-
 * * *
 
 ## To Do:
