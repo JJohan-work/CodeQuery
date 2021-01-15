@@ -29,15 +29,41 @@ function nextQuestion(x,y) {
     x += 1;
   } else {
     shrinkQuestion("#Q"+(x).toString())
-    $("#answer").show();
+    displayAnswer()
     x = 1
   }
   return x
 }
-function displayAnswer() {}
 
+// Answer functions
 
-//answer array:
+function displayAnswer() {
+  $("#answer").show();
+  console.log(answers);
+  let x = indexOfMax(answers);
+  if (x == 0) {$("#python").show()}
+  else if (x == 1) {$("#C").show()}
+  else if (x == 2) {$("#JavaScript").show()}
+  else if (x == 3) {$("#R").show()}
+
+}
+
+function indexOfMax(arr) {
+  if (arr.length === 0) {
+      return -1;
+  }
+  var max = arr[0];
+  var maxIndex = 0;
+  for (var i = 1; i < arr.length; i++) {
+      if (arr[i] > max) {
+          maxIndex = i;
+          max = arr[i];
+      }
+  }
+  return maxIndex;
+}
+
+//answer input array:
 answers = [0,0,0,0];
 
 //main function:
