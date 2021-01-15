@@ -29,6 +29,7 @@ function nextQuestion(x,y) {
     x += 1;
   } else {
     shrinkQuestion("#Q"+(x).toString())
+    $("#answer").show();
     x = 1
   }
   console.log(x);
@@ -37,8 +38,11 @@ function nextQuestion(x,y) {
 
 $(document).ready(function() {
   $(".qcont").hide();
+  $("#answer").hide();
   curQ = 1;
-  $("body").click([curQ],function() {
+  let curCont = "#Q"+curQ.toString()+">.qcont";
+  curQ = nextQuestion(curQ,curCont);
+  $(".answer").click([curQ],function() {
     let curCont = "#Q"+curQ.toString()+">.qcont";
     curQ = nextQuestion(curQ,curCont)
   });
@@ -49,3 +53,12 @@ $(document).ready(function() {
   // let curCont = "#Q"+curQ.toString()+">.qcont";
   // displayQuestion(curCont);
   // $("#next").on( "click", console.log("hello"));
+
+
+  // hide content
+  // display first question
+  // 
+  //
+  //
+  //
+  //

@@ -7,6 +7,16 @@ main {
   overflow-x: hidden;
 }
 
+#answer {
+  background-color: limegreen;
+  position:absolute;
+  left:6.5vw;
+  width:85vw;
+  top:20vh;
+  height:50vh;
+  z-index: 5;
+}
+
 #Q1 {
   background-color: red;
 }
