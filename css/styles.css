@@ -39,6 +39,8 @@ main {
   background-color: purple;
 }
 
+
+
 @keyframes expand {
   0%   {height: 50px;}
   50%  {height: 300px;}
@@ -47,15 +49,20 @@ main {
 
 .question {
   height: 50px;
+  overflow:hidden;
 }
 
-.question:hover {
+.questionExpand {
   animation-name: expand;
   animation-duration: 4s;
+  height: 600px;
 }
 
+.hidden {
+  display: none;
+}
 
-h2 {
+.elemDisplay {
   position: relative;
   animation-name: show;
   animation-duration: 4s;
