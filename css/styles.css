@@ -32,11 +32,17 @@ main {
   height:6em;
   border-radius: 20px;
   margin-bottom: 10vw;
+  outline: none;
+  overflow: hidden;
+}
+
+.question button>h3 {
   font-family: 'Times New Roman', serif;
   font-size: 2em;
   font-weight: 900;
   text-shadow: 2px 2px linen;
-  outline: none;
+  position: relative;
+  z-index: 100;
 }
 
 .question button:active {
@@ -75,6 +81,23 @@ main {
   background-color: purple;
 }
 
+/* Styling for rainbow button */
+
+.colorbar {
+  height:300px;
+  display: flex;
+  position:relative;
+  top:-100px;
+  animation-name: buttonBack;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.colorbar>div {
+  width:200px;
+  z-index: 1;
+}
+
 /* Animations */
 
 .elemDisplay {
@@ -87,8 +110,8 @@ main {
   0%   {left:2000px}
   100% {left:0px}
 }
-/* 
-.buttonBack {
-  position:
 
-} */
+@keyframes buttonBack {
+  0%   {left:400px}
+  100% {left:-400px}
+}

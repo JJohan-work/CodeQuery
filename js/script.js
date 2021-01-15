@@ -70,6 +70,7 @@ answers = [0,0,0,0];
 $(document).ready(function() {
   $(".qcont").hide();
   $("#answer").hide();
+  $(".colorbar").hide();
   $("#answer>div").hide();
   curQ = 1;
   let curCont = "#Q"+curQ.toString()+">.qcont";
@@ -99,4 +100,8 @@ $(document).ready(function() {
       answers[3] = a;
     }
   });
+  $(".answer").hover(
+    function() {$($(this).find(".colorbar")).show()},
+    function() {$($(this).find(".colorbar")).hide()}
+  );
 });
