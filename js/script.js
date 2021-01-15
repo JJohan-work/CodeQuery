@@ -1,3 +1,4 @@
+// Functions
 function expandQuestion(x) {
   $(x).animate({
     height: '800px',
@@ -20,7 +21,7 @@ function displayQuestion(curCont) {
 function nextQuestion(x,y) {
   if (!(x === 1)) {
     shrinkQuestion("#Q"+(x-1).toString())
-    window.scrollBy(0, 100);
+    window.scrollBy(0, 50);
   }
   displayQuestion(y);
   expandQuestion("#Q"+x.toString());
@@ -36,29 +37,27 @@ function nextQuestion(x,y) {
   return x
 }
 
+
+
+
 $(document).ready(function() {
   $(".qcont").hide();
   $("#answer").hide();
+  $("#answer>div").hide();
   curQ = 1;
   let curCont = "#Q"+curQ.toString()+">.qcont";
   curQ = nextQuestion(curQ,curCont);
   $(".answer").click([curQ],function() {
     let curCont = "#Q"+curQ.toString()+">.qcont";
     curQ = nextQuestion(curQ,curCont)
+
+
+
   });
 });
 
 
-  // let curQ = 1;
-  // let curCont = "#Q"+curQ.toString()+">.qcont";
-  // displayQuestion(curCont);
-  // $("#next").on( "click", console.log("hello"));
-
-
-  // hide content
-  // display first question
-  // 
-  //
-  //
-  //
-  //
+// python
+// R
+// Javascript
+// 

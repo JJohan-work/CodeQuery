@@ -1,3 +1,5 @@
+/*main and general content styling*/
+
 main {
   background-color: blue;
   width: 80vw;
@@ -7,6 +9,7 @@ main {
   overflow-x: hidden;
 }
 
+/*styling for the answer window*/
 #answer {
   background-color: limegreen;
   position:absolute;
@@ -15,6 +18,13 @@ main {
   top:20vh;
   height:50vh;
   z-index: 5;
+}
+
+/* styling for the question windows*/
+.question {
+  height: 50px;
+  overflow:hidden;
+  padding-left: 20px;
 }
 
 #Q1 {
@@ -49,30 +59,12 @@ main {
   background-color: purple;
 }
 
-.question {
-  height: 50px;
-  overflow:hidden;
-}
-
-.questionExpand {
-  animation-name: expand;
-  animation-duration: 4s;
-}
-
-@keyframes expand {
-  0%   {height: 50px;}
-  50%  {height: 300px;}
-  100% {height: 600px;}
-}
-
-.hidden {
-  display: none;
-}
+/* Animations */
 
 .elemDisplay {
   position: relative;
   animation-name: show;
-  animation-duration: 4s;
+  animation-duration: 2s;
 }
 
 @keyframes show {
