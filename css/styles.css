@@ -1,0 +1,67 @@
+main {
+  background-color: blue;
+  width: 80vw;
+  border-radius: 35px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow-x: hidden;
+}
+
+#Q1 {
+  background-color: red;
+}
+
+#Q2 {
+  background-color: orange;
+}
+
+#Q3 {
+  background-color: yellow;
+}
+
+#Q4 {
+  background-color: greenyellow;
+}
+
+#Q5 {
+  background-color: cyan;
+}
+
+#Q6 {
+  background-color: blue;
+}
+
+#Q7 {
+  background-color: blueviolet;
+}
+
+#Q8 {
+  background-color: purple;
+}
+
+@keyframes expand {
+  0%   {height: 50px;}
+  50%  {height: 300px;}
+  100% {height: 600px;}
+}
+
+.question {
+  height: 50px;
+}
+
+.question:hover {
+  animation-name: expand;
+  animation-duration: 4s;
+}
+
+
+h2 {
+  position: relative;
+  animation-name: show;
+  animation-duration: 4s;
+}
+
+@keyframes show {
+  0%   {left:2000px}
+  100% {left:0px}
+}
