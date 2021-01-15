@@ -27,35 +27,51 @@ main {
   padding-left: 20px;
 }
 
-#Q1 {
+.question button {
+  width:30vw;
+  height:6em;
+  border-radius: 20px;
+  margin-bottom: 10vw;
+  font-family: 'Times New Roman', serif;
+  font-size: 2em;
+  font-weight: 900;
+  text-shadow: 2px 2px linen;
+  outline: none;
+}
+
+.question button:active {
+  border: 5px solid magenta;
+}
+
+#Q1, .R {
   background-color: red;
 }
 
-#Q2 {
+#Q2, .O {
   background-color: orange;
 }
 
-#Q3 {
+#Q3, .Y {
   background-color: yellow;
 }
 
-#Q4 {
+#Q4, .G {
   background-color: greenyellow;
 }
 
-#Q5 {
+#Q5, .C {
   background-color: cyan;
 }
 
-#Q6 {
+#Q6, .B {
   background-color: blue;
 }
 
-#Q7 {
+#Q7, .V {
   background-color: blueviolet;
 }
 
-#Q8 {
+#Q8, .P {
   background-color: purple;
 }
 
@@ -71,3 +87,8 @@ main {
   0%   {left:2000px}
   100% {left:0px}
 }
+/* 
+.buttonBack {
+  position:
+
+} */
