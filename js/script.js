@@ -1,7 +1,7 @@
 // Functions
 function expandQuestion(x) {
   $(x).animate({
-    height: '800px',
+    height: '500px',
 });
 }
 

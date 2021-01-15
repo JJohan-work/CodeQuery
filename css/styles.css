@@ -24,25 +24,28 @@ main {
 .question {
   height: 50px;
   overflow:hidden;
-  padding-left: 20px;
+  padding-left: 5vw;
 }
 
 .question button {
   width:30vw;
-  height:6em;
+  height:9em;
   border-radius: 20px;
-  margin-bottom: 10vw;
+  margin-bottom: 100px;
   outline: none;
   overflow: hidden;
 }
 
 .question button>h3 {
+  width: 25vw;
   font-family: 'Times New Roman', serif;
   font-size: 2em;
   font-weight: 900;
-  text-shadow: 2px 2px linen;
-  position: relative;
+  position: absolute;
+  top: 0.8em;
+  left:2.5vw;
   z-index: 100;
+  
 }
 
 .question button:active {
@@ -84,10 +87,10 @@ main {
 /* Styling for rainbow button */
 
 .colorbar {
-  height:300px;
+  height:10em;
   display: flex;
   position:relative;
-  top:-100px;
+  top:-0.5em;
   animation-name: buttonBack;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -112,6 +115,6 @@ main {
 }
 
 @keyframes buttonBack {
-  0%   {left:400px}
-  100% {left:-400px}
+  0%   {left:30vw}
+  100% {left:-30vw}
 }
