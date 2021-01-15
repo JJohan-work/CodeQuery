@@ -7,16 +7,21 @@ function displayQuestion(curCont) {
   $(curCont).addClass("questionExpand");
 }
 
-function nextQuestion(curQ) {
-  console.log(curQ);
-  curQ += 1;
-  console.log(curQ);
+function nextQuestion(x,y) {
+  console.log(y);
+  x += 1;
+  console.log(x);
+  displayQuestion(y);
+  return x
 }
 
 $(document).ready(function() {
-  let curQ = 1;
-  let curCont = "#Q"+curQ.toString()+">.qcont";
-  $("#next").click(nextQuestion(curQ));
+  $(".qcont").hide();
+  curQ = 1;
+  $("#next").click([curQ],function() {
+    let curCont = "#Q"+curQ.toString()+">.qcont";
+    curQ = nextQuestion(curQ,curCont)
+  });
 });
 
 
