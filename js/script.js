@@ -70,8 +70,11 @@ answers = [0,0,0,0];
 $(document).ready(function() {
   $(".qcont").hide();
   $("#answer").hide();
-  $(".colorbar").hide();
   $("#answer>div").hide();
+
+  $(".answer").append('<div class="colorbar"><div class="R"></div><div class="O"></div><div class="Y"></div><div class="G"></div><div class="C"></div><div class="B"></div><div class="V"></div><div class="P"></div></div>');
+  $(".colorbar").hide();
+
   curQ = 1;
   let curCont = "#Q"+curQ.toString()+">.qcont";
   curQ = nextQuestion(curQ,curCont);
