@@ -20,6 +20,45 @@ main {
   z-index: 5;
 }
 
+#answer>div>div {
+  background-color: rgb(228, 226, 206);
+  margin-left:50px;
+  margin-right:50px;
+  border:3px solid seagreen;
+  border-radius: 50px;
+}
+#answer>div>div>* {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+#answer>button {
+  margin-left:80%;
+  margin-top:30px;
+  border-radius: 10px;
+  border: 2px solid black;
+  outline:none;
+}
+
+#answer>button:hover {
+  margin-left:80%;
+  margin-top:30px;
+  border-radius: 10px;
+  position: relative;
+  top:-2px;
+  left:-2px;
+  box-shadow: 2px 2px black;
+}
+
+#answer>button:active {
+  margin-left:80%;
+  margin-top:30px;
+  border-radius: 10px;
+  position: relative;
+  top:-1px;
+  left:-1px;
+  box-shadow: 1px 1px black;
+}
 /* styling for the question windows*/
 .question {
   height: 50px;
